@@ -15,8 +15,60 @@ function desenharCanvas(){
     tabuleiro.closePath();
 }
 
+function desenharForca(){
 
-function desenharLinhas(){
+    if(erros === 6){
+        tabuleiro.beginPath();
+        tabuleiro.moveTo(650, 200);
+        tabuleiro.lineTo(650, 500);
+        tabuleiro.moveTo(750, 200);
+        tabuleiro.lineTo(650, 200);
+        tabuleiro.moveTo(750, 200);
+        tabuleiro.lineTo(750, 210);
+        tabuleiro.stroke();
+        tabuleiro.closePath();
+    }else if(erros === 5){
+        tabuleiro.beginPath();
+        tabuleiro.arc(750, 240, 30, 0, 2*Math.PI);
+        tabuleiro.stroke();
+        tabuleiro.closePath();
+    }else if(erros === 4){
+        tabuleiro.beginPath();
+        tabuleiro.moveTo(750, 270);
+        tabuleiro.lineTo(750, 400);
+        tabuleiro.stroke();
+        tabuleiro.closePath();
+    }else if(erros === 3){
+        tabuleiro.beginPath();
+        tabuleiro.moveTo(750, 270);
+        tabuleiro.lineTo(700, 320);
+        tabuleiro.stroke();
+        tabuleiro.closePath();
+    }else if(erros === 2){
+        tabuleiro.beginPath();
+        tabuleiro.moveTo(750, 270);
+        tabuleiro.lineTo(800, 320);
+        tabuleiro.stroke();
+        tabuleiro.closePath();
+    }else if(erros === 1){
+        tabuleiro.beginPath();
+        tabuleiro.moveTo(750, 400);
+        tabuleiro.lineTo(700, 470);
+        tabuleiro.stroke();
+        tabuleiro.closePath();
+    }else if(erros === 0){
+        tabuleiro.beginPath();
+        tabuleiro.moveTo(750, 400);
+        tabuleiro.lineTo(800, 470);
+        tabuleiro.stroke();
+        tabuleiro.closePath();
+    }
+
+
+
+}
+
+function desenharLinhas(erros){
     tabuleiro.lineWidth = 6;
     tabuleiro.lineCap = "round";
     tabuleiro.lineJoin = "round";

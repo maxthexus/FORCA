@@ -4,8 +4,8 @@ let palavraSecreta = "";
 let letras = []
 let letrasIncorretas = []
 let letraCorreta = 0
-let erros = 8
-let distancia = 8
+let erros = 7
+let distancia = 7
 let repetida = true
 let tamanhoPalavraSecreta = palavraSecreta.length
 function sorteiaPalavraSecreta(){
@@ -48,15 +48,23 @@ function adicionarLetraIncorreta(letra){
         }
         console.log(erros)
 
-        if(erros == 0){
-            window.alert('Game Over')
-            window.location.reload()
-        }
-    console.log(letrasIncorretas,'Incorretas')
+
 }
 
 
+function vitoria(){
+    if(letraCorreta == palavraSecreta.length){
+        window.alert('Parabéns você venceu!')
+        window.location.reload()
+    }
+}
 
+function derrota(){
+    if(erros == 0){
+        window.alert('Game Over')
+        window.location.reload()
+    }
+}
 
 
 
@@ -67,6 +75,7 @@ function iniciaJogo(){
     sorteiaPalavraSecreta()
     desenharCanvas()
     desenharLinhas()
+    desenharForca()
     verificarLetra()
    
     document.onkeydown = (e) =>{
@@ -78,14 +87,15 @@ function iniciaJogo(){
                 if(palavraSecreta[i] === letra){
                     escreverLetraCorreta(i)
                     letraCorreta ++
-                    console.log(letraCorreta, 'Letra Correta')
-                    console.log(palavraSecreta.length, 'Tamanho Palavra')
+                    vitoria()
+                    
                 }
             }
         }else{
             adicionarLetraIncorreta(letra)
             escreverLetraIncorreta(letra, erros)
+            desenharForca(erros)
+            derrota()
         }
     }
 }
-
