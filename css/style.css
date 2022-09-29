@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.logo{
+    margin: 15px;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-iniciar{
+    background-color: #0A3871;
+    color: #fff;
+    width: 200px;
+    height: 80px;
+    border-radius: 25px;
+    border: solid 1px black;
+    margin: 10px;
+    font-size: 1.3em;
+}
+
+.btn-iniciar:hover{
+    background: #06274e;
+    cursor: pointer;
+}
+
+.btn-nova-palavra{
+    background-color: #F3F5FC;
+    color: #0A3871;
+    width: 200px;
+    height: 80px;
+    border-radius: 25px;
+    border: solid 1px black;
+    margin: 10px;
+    font-size: 1.3em;
+}
+
+.btn-nova-palavra:hover{
+    background: #c4c4c4;
+    cursor: pointer;
+}
+
