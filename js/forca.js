@@ -80,7 +80,6 @@ function iniciaJogo(){
     document.querySelector(".botoes").style.display = 'none'
     document.querySelector(".vitoria").style.display = 'none'
     document.querySelector(".derrota").style.display = 'none'
-    document.querySelector(".btn-novo-jogo").style.display = 'none'
     sorteiaPalavraSecreta()
     desenharCanvas()
     desenharLinhas()
