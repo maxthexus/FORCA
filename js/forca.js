@@ -54,24 +54,33 @@ function adicionarLetraIncorreta(letra){
 
 function vitoria(){
     if(letraCorreta == palavraSecreta.length){
-        window.alert('Parabéns você venceu!')
-        window.location.reload()
+        document.querySelector(".vitoria").style.display = 'block'
+        document.querySelector(".btn-novo-jogo").style.display = 'block'
+        document.querySelector(".canvas").style.display = 'none'
     }
 }
 
 function derrota(){
     if(erros == 0){
-        window.alert('Game Over')
-        window.location.reload()
+        document.querySelector(".derrota").style.display = 'block'
+        document.querySelector(".btn-novo-jogo").style.display = 'block'
+        document.querySelector(".canvas").style.display = 'none'
     }
+}
+
+function novoJogo(){
+    window.location.reload()
+    document.querySelector(".canvas").style.display = 'none'
 }
 
 
 
-
-
 function iniciaJogo(){
+    document.querySelector(".canvas").style.display = 'block'
     document.querySelector(".botoes").style.display = 'none'
+    document.querySelector(".vitoria").style.display = 'none'
+    document.querySelector(".derrota").style.display = 'none'
+    document.querySelector(".btn-novo-jogo").style.display = 'none'
     sorteiaPalavraSecreta()
     desenharCanvas()
     desenharLinhas()
@@ -86,7 +95,6 @@ function iniciaJogo(){
             for(let i = 0; i<palavraSecreta.length; i++){
                 if(palavraSecreta[i] === letra){
                     escreverLetraCorreta(i)
-                    letraCorreta ++
                     vitoria()
                     
                 }

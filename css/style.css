@@ -32,6 +32,23 @@
     cursor: pointer;
 }
 
+.btn-novo-jogo{
+    display:none;
+    background-color: #0A3871;
+    color: #fff;
+    width: 200px;
+    height: 80px;
+    border-radius: 25px;
+    border: solid 1px black;
+    margin: 10px;
+    font-size: 1.3em;
+}
+
+.btn-novo-jogo:hover{
+    background: #06274e;
+    cursor: pointer;
+}
+
 .btn-nova-palavra{
     background-color: #F3F5FC;
     color: #0A3871;
@@ -48,3 +65,10 @@
     cursor: pointer;
 }
 
+.vitoria{
+    display: none;
+}
+
+.derrota{
+    display: none;
+}
